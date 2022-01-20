@@ -90,3 +90,7 @@ Then I tried forcing redraw of entire screen [as mentioned here](https://askubun
 I tried adding a `/etc/X11/xorg.conf` file with parameters as mentioned [here](https://askubuntu.com/questions/263996/fixing-the-nvidia-graphics-screen-flicker-issue) but if the file so much as exists then nothing will start! 
 
 Also it appears that occasionally we get random mouse freezes.
+
+SO
+in order to undo things that didn't work, I went back to the grub file to remove the `i915.enable_psr=0` setting, but it turns out I misspelled it.
+After fixing the typo, update-grub, and restart, IT NOW WORKS!
