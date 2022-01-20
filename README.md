@@ -37,3 +37,8 @@ Settings - appearance - dark
 Steam scrolling is very slow, not sure if that's a Steam problem, since Chrome seems to scroll fine? Also not sure if that's a driver problem...
 
 Apparently I have a GTX MX450 GPU, so maybe I need a different driver? LAst time I tried the 470, but maybe the 450 is what I need?
+NOPE the [official nvidia site](https://www.nvidia.com/Download/index.aspx) says it's 470.
+
+Checked internet to see what I'm missing out on ,basically - 3d.
+
+Tried a couple of 3d games and yikes. Hardly moving. So let's try and make it work?
