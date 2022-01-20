@@ -58,3 +58,6 @@ But the 3d is still just as slow and impossible as ever, so that was never our p
 Oh well
 
 What seems to be happening is that I'm at 100% CPU usage... so is the GPU just not working???
+
+
+Somehow??? it got blackscreened again. I did get another piece of info, which is that tty6 was stuck on `show plymouth boot screen`. Same trick as last time, esc - safe mode - root terminal - `sudo apt purge nvidia*`. We need to find a way to actually get the GPU utilized, regardless of the driver.
