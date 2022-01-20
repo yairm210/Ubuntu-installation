@@ -76,3 +76,5 @@ SO this has been a hell of a ride. I did a bunch of things in the meantime and i
 
 So the only thing I know for SURE is that some drivers (nouveau) NEED the nomodeset and others (nvidia) CANNOT have it set.
 This was fun.
+
+That WAS worth it though - the display now supports multiple resolutions, the blue light filter seems to actually be engaged, Steam scrolls faster and most noticably - 3d isn't COMPLETELY BROKEN. And Age of Wonders III was playable!!
