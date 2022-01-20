@@ -56,3 +56,5 @@ So just without the quiet.
 nvidia-driver-470 is in use.
 But the 3d is still just as slow and impossible as ever, so that was never our problem... it's the graphics card :(
 Oh well
+
+What seems to be happening is that I'm at 100% CPU usage... so is the GPU just not working???
