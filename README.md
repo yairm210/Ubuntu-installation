@@ -44,3 +44,13 @@ Checked internet to see what I'm missing out on ,basically - 3d.
 Tried a couple of 3d games and yikes. Hardly moving. So let's try and make it work?
 
 Doing a risky move - I installed the Nvidia drivers like last time, but I ALSO removed the 'nomodeset' grub parameter, since [nvidia recommended it](https://forums.developer.nvidia.com/t/black-screen-after-install-of-nvidia-driver-ubuntu/109312/20), AND the 'quiet' parameter as recommended by [this guy](https://forums.developer.nvidia.com/t/possible-solution-for-black-screen-ubuntu-and-latest-460-driver/179850). Lets see!
+
+OKAY. So, what sheband caused a flashy screen like the initial install, and THAT we solved with a `nomodeset`. So I tried the same thing now, and halleluja, everything seems to work!
+
+Grub line now looks like:
+
+> GRUB_CMDLINE_LINUX_DEFAULT="splash nomodeset"
+
+So just without the quiet.
+
+nvidia-driver-470 is in use.
