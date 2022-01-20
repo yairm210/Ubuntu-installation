@@ -29,3 +29,9 @@ vscode from the snap store
 nvidia drivers made the whole screen black. Deleted packages through the console, `sudo apt purge nvidia*` and it returned to the default drivers.
 
 Screen felt too large, so tried adding another resolution using [this guide](https://www.cyberciti.biz/faq/ubuntu-linux-install-nvidia-driver-latest-proprietary-driver/) - I was able to screate and set the new resolution but once I did so the computer encountered an 'unexpected error' and logged me out, after login all programs were closed and the new resolution setting no longer existed.   
+
+Installed hebrew from search - languages
+
+Settings - appearance - dark
+
+Steam scrolling is very slow, not sure if that's a Steam problem, since Chrome seems to scroll fine? Also not sure if that's a driver problem...
