@@ -11,3 +11,4 @@ Tried `sudo apt update`, `sudo apt upgrade`, nothing.
 Downloaded Synaptic, 'fix broken packages', checked for broken packages, none - steam *still* wouldn't download. 
 Restarted and suddenly it worked! Mysterious.
 
+Restarted, updated `snapd` and `snap store` from the snap store, sounds like a good first step before actually downloading things. 
