@@ -54,3 +54,5 @@ Grub line now looks like:
 So just without the quiet.
 
 nvidia-driver-470 is in use.
+But the 3d is still just as slow and impossible as ever, so that was never our problem... it's the graphics card :(
+Oh well
