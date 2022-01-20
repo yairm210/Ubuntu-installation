@@ -42,3 +42,5 @@ NOPE the [official nvidia site](https://www.nvidia.com/Download/index.aspx) says
 Checked internet to see what I'm missing out on ,basically - 3d.
 
 Tried a couple of 3d games and yikes. Hardly moving. So let's try and make it work?
+
+Doing a risky move - I installed the Nvidia drivers like last time, but I ALSO removed the 'nomodeset' grub parameter, since [nvidia recommended it](https://forums.developer.nvidia.com/t/black-screen-after-install-of-nvidia-driver-ubuntu/109312/20), AND the 'quiet' parameter as recommended by [this guy](https://forums.developer.nvidia.com/t/possible-solution-for-black-screen-ubuntu-and-latest-460-driver/179850). Lets see!
