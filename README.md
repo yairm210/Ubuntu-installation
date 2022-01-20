@@ -79,8 +79,14 @@ This was fun.
 
 That WAS worth it though - the display now supports multiple resolutions, the blue light filter seems to actually be engaged, Steam scrolls faster and most noticably - 3d isn't COMPLETELY BROKEN. And Age of Wonders III was playable!!
 
+### Screen flickering
+
 BUT this caused a wierd flickering of the screen when e.g. scrolling on chrome.
 
 Tried adding grub setting as mentioned [here](https://forums.developer.nvidia.com/t/black-screen-and-screen-flickering-in-ubuntu-20-04-with-470-drivers/190071/6) - did not work
 
 Then I tried forcing redraw of entire screen [as mentioned here](https://askubuntu.com/questions/263996/fixing-the-nvidia-graphics-screen-flicker-issue) - 
+
+I tried adding a `/etc/X11/xorg.conf` file with parameters as mentioned [here](https://askubuntu.com/questions/263996/fixing-the-nvidia-graphics-screen-flicker-issue) but if the file so much as exists then nothing will start! 
+
+Also it appears that occasionally we get random mouse freezes.
