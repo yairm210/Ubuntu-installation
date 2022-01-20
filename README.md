@@ -3,6 +3,8 @@ Documenting the process so next time it's easier
 
 Install, without downloading drivers. Restart.
 
+## Initial install of apps
+
 Screen starts having slight problems during the install, after restart it doesn't even load, all I get is a flashing cursor.
 Added 'nomodeset' to grub file, and ran `sudo update-grub` - worked!
 
@@ -25,6 +27,8 @@ After it finished updating, it opens up!
 `sudo snap install android-studio --classic` for Android Studio
 
 vscode from the snap store
+
+## Nvidia drivers
 
 nvidia drivers made the whole screen black. Deleted packages through the console, `sudo apt purge nvidia*` and it returned to the default drivers.
 
@@ -61,3 +65,14 @@ What seems to be happening is that I'm at 100% CPU usage... so is the GPU just n
 
 
 Somehow??? it got blackscreened again. I did get another piece of info, which is that tty6 was stuck on `show plymouth boot screen`. Same trick as last time, esc - safe mode - root terminal - `sudo apt purge nvidia*`. We need to find a way to actually get the GPU utilized, regardless of the driver.
+
+SO this has been a hell of a ride. I did a bunch of things in the meantime and it's hard to tell what actually helped:
+
+ - installed nvidia driver from Drivers in UI - this doesn't mean it's actuve yet!
+ - disabled secure boot from BIOS settings
+ - blacklisted the OTHER driver (nouveau) as recommended [here](https://forums.developer.nvidia.com/t/black-screen-after-installing-nvidia-driver-470-in-ubuntu-21-04/191053)
+ - sudo prime-select intel, and then sudo prime-select nvidia, also recommended there
+ - And then finally, GOT RID of the nomodeset and THEN IT WORKED.
+
+So the only thing I know for SURE is that some drivers (nouveau) NEED the nomodeset and others (nvidia) CANNOT have it set.
+This was fun.
