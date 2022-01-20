@@ -25,3 +25,5 @@ After it finished updating, it opens up!
 `sudo snap install android-studio --classic` for Android Studio
 
 vscode from the snap store
+
+nvidia drivers made the whole screen black. Deleted packages through the console, `sudo apt purge nvidia*`
