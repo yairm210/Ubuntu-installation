@@ -13,26 +13,44 @@ Tried `sudo apt update`, `sudo apt upgrade`, nothing.
 Downloaded Synaptic, 'fix broken packages', checked for broken packages, none - steam *still* wouldn't download. 
 Restarted and suddenly it worked! Mysterious.
 
-Restarted, updated `snapd` and `snap store` from the snap store, sounds like a good first step before actually downloading things. 
-Updated Gnome. Snap store hadn't finished its update, so I closed it, thinking that the fact that it was open was the blocker. But I couldn't reopen it.
-
-After restarting, still couldn't. System monitor showed that 'snap-store' was being started, then stopped.
-`snap-store` command returned `ERROR: not connected to the gnome-3-38-2004 content interface.` Okay then. `snap refresh snap-store` says it has no updates available.
-`snap remove snap-store` gives `error: snap "snap-store" has "refresh-snap" change in progress`. So I guess the lesson is don't try and update the stap store from within the snap store.
-
-`snap changes` gives the list of tasks, `snap abort` cancells the update. It's still not starting - error loading shared libraries, I guess the rollback wan't as rollback-y as it should have been, but that's what you get for interrupting midway.
-Before we try to unintsall-reinstall, try `snap refresh snap-store` to redownload the latest version. Seems to work, taking an awful long time to connect eligible plugs and slots. I can't tell when I started running that, I should add a timestamp to all commands.
-After it finished updating, it opens up!
-
 `sudo snap install android-studio --classic` for Android Studio
 
 vscode from the snap store
 
 Settings - appearance - dark
 
-Installed hebrew from search - languages. That's still not enought to actually type in berew, for that we need to go to Settings > Input and Language > Input sources and add Hebrew. 
+Installed hebrew from search - languages. That's still not enought to actually *type* in Heberew, for that we need to go to Settings > Input and Language > Input sources and add Hebrew. 
+#### Snap basics
+
+Restarted, updated `snapd` and `snap store` from the snap store, sounds like a good first step before actually downloading things. 
+Updated Gnome. Snap store hadn't finished its update, so I closed it, thinking that the fact that it was open was the blocker. But I couldn't reopen it.
+
+After restarting, still couldn't. System monitor showed that 'snap-store' was being started, then stopped.
+`snap-store` command returned `ERROR: not connected to the gnome-3-38-2004 content interface.` Okay then. `snap refresh snap-store` says it has no updates available.
+`snap remove snap-store` gives `error: snap "snap-store" has "refresh-snap" change in progress`. So I guess the lesson is don't try and update the stap store from within the snap store.
+Alternatively, don't try and update other snaps when updating snapd. The binary you started out using may need to be replaced.
+
+`snap changes` gives the list of tasks, `snap abort` cancells the update. It's still not starting - error loading shared libraries, I guess the rollback wan't as rollback-y as it should have been, but that's what you get for interrupting midway.
+Before we try to unintsall-reinstall, try `snap refresh snap-store` to redownload the latest version. Seems to work, taking an awful long time to connect eligible plugs and slots. I can't tell when I started running that, I should add a timestamp to all commands.
+After it finished updating, it opens up!
+
 
 ## Nvidia drivers
+
+#### BLUF
+
+Download recommended drivers from "Additional Drivers". They know what they're on about.
+
+You may be playing around with Grub a lot, so write the revert steps on a piece of paper and have it handy:
+
+- `nano /etc/default/grub`
+- GRUB_CMDLINE_LINUX_DEFAULT="stuff"
+- If you give up on nvidia halfway you can return to normal by removing the drivers with `sudo apt purge nvidia*`
+
+Final Grub configuration that solved all problems - `GRUB_CMDLINE_LINUX_DEFAULT="splash i915.enable_psr=0"`
+
+
+## Details
 
 nvidia drivers made the whole screen black. Deleted packages through the console, `sudo apt purge nvidia*` and it returned to the default drivers.
 
@@ -43,7 +61,7 @@ Steam scrolling is very slow, not sure if that's a Steam problem, since Chrome s
 Apparently I have a GTX MX450 GPU, so maybe I need a different driver? LAst time I tried the 470, but maybe the 450 is what I need?
 NOPE the [official nvidia site](https://www.nvidia.com/Download/index.aspx) says it's 470.
 
-Checked internet to see what I'm missing out on ,basically - 3d.
+Checked internet to see what I'm missing out on, basically - 3d.
 
 Tried a couple of 3d games and yikes. Hardly moving. So let's try and make it work?
 
